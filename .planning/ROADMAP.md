@@ -28,12 +28,12 @@ The Clover Labs skeleton website is built in a strict dependency-driven order: d
   2. The B&W color token system (surface, on-surface, border, muted values) is available as Tailwind utilities and CSS custom properties — no raw hex values anywhere in component code
   3. Space Grotesk, Inter, and JetBrains Mono load via next/font with zero layout shift on refresh
   4. All static content (section IDs, nav links, team names, service copy, capability categories) lives in `lib/constants.ts` and all data shapes are typed in `lib/types.ts`
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Scaffold Next.js 15 with TypeScript strict mode, App Router, and Tailwind CSS v4
-- [ ] 01-02: Define B&W design token system — semantic color tokens, type scale, spacing rhythm, animation durations in globals.css
-- [ ] 01-03: Define data contracts — lib/types.ts interfaces and lib/constants.ts content constants
+- [ ] 01-01-PLAN.md — Scaffold Next.js 16 with TypeScript strict mode, App Router, Tailwind CSS v4, and supporting deps (Wave 1)
+- [ ] 01-02-PLAN.md — Define B&W design token system in globals.css, configure next/font loading in layout.tsx (Wave 2)
+- [ ] 01-03-PLAN.md — Define data contracts: lib/types.ts interfaces and lib/constants.ts content constants (Wave 2)
 
 ---
 
@@ -147,4 +147,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 ---
 *Roadmap created: 2026-02-22*
-*Last updated: 2026-02-22 after initial creation*
+*Last updated: 2026-02-22 after Phase 1 planning*
