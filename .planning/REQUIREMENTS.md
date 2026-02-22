@@ -122,49 +122,49 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FNDN-01 | — | Pending |
-| FNDN-02 | — | Pending |
-| FNDN-03 | — | Pending |
-| FNDN-04 | — | Pending |
-| FNDN-05 | — | Pending |
-| FNDN-06 | — | Pending |
-| NAV-01 | — | Pending |
-| NAV-02 | — | Pending |
-| NAV-03 | — | Pending |
-| NAV-04 | — | Pending |
-| NAV-05 | — | Pending |
-| HERO-01 | — | Pending |
-| HERO-02 | — | Pending |
-| HERO-03 | — | Pending |
-| SERV-01 | — | Pending |
-| SERV-02 | — | Pending |
-| SERV-03 | — | Pending |
-| PORT-01 | — | Pending |
-| PORT-02 | — | Pending |
-| PORT-03 | — | Pending |
-| TEAM-01 | — | Pending |
-| TEAM-02 | — | Pending |
-| TEAM-03 | — | Pending |
-| TEAM-04 | — | Pending |
-| CONT-01 | — | Pending |
-| CONT-02 | — | Pending |
-| CONT-03 | — | Pending |
-| VISL-01 | — | Pending |
-| VISL-02 | — | Pending |
-| VISL-03 | — | Pending |
-| VISL-04 | — | Pending |
-| VISL-05 | — | Pending |
-| VISL-06 | — | Pending |
-| LAYT-01 | — | Pending |
-| LAYT-02 | — | Pending |
-| LAYT-03 | — | Pending |
-| LAYT-04 | — | Pending |
+| FNDN-01 | Phase 1 | Pending |
+| FNDN-02 | Phase 1 | Pending |
+| FNDN-03 | Phase 1 | Pending |
+| FNDN-04 | Phase 1 | Pending |
+| FNDN-05 | Phase 1 | Pending |
+| FNDN-06 | Phase 1 | Pending |
+| NAV-01 | Phase 2 | Pending |
+| NAV-02 | Phase 2 | Pending |
+| NAV-03 | Phase 2 | Pending |
+| NAV-04 | Phase 2 | Pending |
+| NAV-05 | Phase 2 | Pending |
+| HERO-01 | Phase 5 | Pending |
+| HERO-02 | Phase 5 | Pending |
+| HERO-03 | Phase 4 | Pending |
+| SERV-01 | Phase 5 | Pending |
+| SERV-02 | Phase 5 | Pending |
+| SERV-03 | Phase 4 | Pending |
+| PORT-01 | Phase 5 | Pending |
+| PORT-02 | Phase 4 | Pending |
+| PORT-03 | Phase 5 | Pending |
+| TEAM-01 | Phase 5 | Pending |
+| TEAM-02 | Phase 4 | Pending |
+| TEAM-03 | Phase 5 | Pending |
+| TEAM-04 | Phase 5 | Pending |
+| CONT-01 | Phase 4 | Pending |
+| CONT-02 | Phase 5 | Pending |
+| CONT-03 | Phase 5 | Pending |
+| VISL-01 | Phase 3 | Pending |
+| VISL-02 | Phase 3 | Pending |
+| VISL-03 | Phase 3 | Pending |
+| VISL-04 | Phase 3 | Pending |
+| VISL-05 | Phase 3 | Pending |
+| VISL-06 | Phase 3 | Pending |
+| LAYT-01 | Phase 2 | Pending |
+| LAYT-02 | Phase 6 | Pending |
+| LAYT-03 | Phase 2 | Pending |
+| LAYT-04 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 37 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 37
+- Mapped to phases: 37 (100%)
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-22*
-*Last updated: 2026-02-22 after initial definition*
+*Last updated: 2026-02-22 after roadmap creation — traceability complete*
