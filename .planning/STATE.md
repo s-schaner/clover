@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-02-22)
 ## Current Position
 
 Phase: 1 of 6 (Foundation & Design System)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-02-22 — Roadmap and state initialized
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-22 — Completed 01-01-PLAN.md (Next.js scaffold)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] ~6% (1/18 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 14 min
+- Total execution time: 0.23 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation-design-system | 1/3 | 14 min | 14 min |
 
 **Recent Trend:**
-- Last 5 plans: —
+- Last 5 plans: 01-01 (14 min)
 - Trend: —
 
 *Updated after each plan completion*
@@ -47,6 +47,10 @@ Recent decisions affecting current work:
 - [Init]: Hybrid single-page scroll now, structured for multi-page split later (lib/constants.ts anchor IDs)
 - [Init]: All content hardcoded in lib/constants.ts — real owner names (Mike Wong, Matt Drapp, Peter Kwon, Stefan Schaner) from day one
 - [Init]: Geometric fractal patterns (not circuit board) — opacity under 8-10% on dark, under 5% on light
+- [01-01]: framer-motion 12.x installed (not 11.x as originally noted — latest stable is 12.34.3)
+- [01-01]: Actual Next.js version is 16.1.6 (not 15 as originally noted in decisions) — stack upgraded
+- [01-01]: lint script uses `eslint` directly (next lint removed in Next.js 16)
+- [01-01]: Turbopack is now default dev bundler in Next.js 16 — no flag needed
 
 ### Pending Todos
 
@@ -60,6 +64,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-22
-Stopped at: Roadmap created, ready to begin planning Phase 1
+Last session: 2026-02-22T00:04Z
+Stopped at: Completed 01-01-PLAN.md — Next.js 16 scaffold done, ready for 01-02 and 01-03 in parallel
 Resume file: None
