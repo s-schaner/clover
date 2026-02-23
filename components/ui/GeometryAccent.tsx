@@ -1,6 +1,6 @@
 // components/ui/GeometryAccent.tsx
 // Hero signature draw animation — the first visual impact a visitor receives.
-// Renders a fractal-like geometric path using CSS keyframes on stroke-dashoffset.
+// Renders a four-leaf clover pattern using CSS keyframes on stroke-dashoffset.
 // Path length is read at runtime via getTotalLength() to avoid hardcoding.
 // Animation is disabled and final settled state shown for prefers-reduced-motion.
 
@@ -12,99 +12,133 @@ interface GeometryAccentProps {
   className?: string;
 }
 
-// Fractal recursive grid path — engineering blueprint aesthetic.
-// Traces an outer rectangle then subdivides into 2 levels of internal grid.
+// Four-leaf clover pattern — Clover Labs brand identity.
+// Uses the rose curve r = cos(2θ) to generate four symmetric petals,
+// with internal vein/structural lines for an engineering blueprint aesthetic.
 // Total path is intentionally complex to produce 1–1.5s of draw time.
 //
-// Layout within viewBox 0 0 600 600:
-//   Outer frame: 20,20 → 580,580
-//   Level-1 grid: 4×4 cells (each 140px)
-//   Level-2 sub-grid: selected cells subdivided into 2×2 quarters
+// Layout within viewBox 0 0 600 600, centered at (300, 300).
+// Each petal extends ~200px from center, with veins at 45° and midlines.
 //
-// Drawn as a single continuous <path> using M/L/m moves so stroke-dashoffset
+// Drawn as a single continuous <path> using M/C/L moves so stroke-dashoffset
 // animates the whole structure as one unbroken line being drawn.
-const FRACTAL_PATH = [
-  // --- Outer frame ---
-  'M 20 20',
-  'L 580 20',
-  'L 580 580',
-  'L 20 580',
-  'L 20 20',
 
-  // --- Level-1 grid: 4 columns × 4 rows (140px pitch) ---
-  // Vertical dividers
-  'M 160 20', 'L 160 580',
-  'M 300 20', 'L 300 580',
-  'M 440 20', 'L 440 580',
+function generateCloverPath(): string {
+  const cx = 300;
+  const cy = 300;
+  const segments: string[] = [];
 
-  // Horizontal dividers
-  'M 20 160',  'L 580 160',
-  'M 20 300',  'L 580 300',
-  'M 20 440',  'L 580 440',
+  // --- Generate 4-leaf clover outline using rose curve r = cos(2θ) ---
+  // We trace each petal as a cubic Bézier curve for smooth rendering.
+  // Petals point along the 4 cardinal axes (0°, 90°, 180°, 270°).
+  const petalLength = 200; // Distance from center to petal tip
+  const petalWidth = 120;  // Width of petal at its widest point
 
-  // --- Level-2 sub-grid: top-left cell (20,20)→(160,160) ---
-  // Quarter verticals at 90 (midpoint)
-  'M 90 20',   'L 90 160',
-  // Quarter horizontals at 90
-  'M 20 90',   'L 160 90',
+  // Each petal: from center, bulge out to tip, curve back to center.
+  // Control points create the rounded heart-like petal shape.
 
-  // --- Level-2 sub-grid: top-right cell (440,20)→(580,160) ---
-  'M 510 20',  'L 510 160',
-  'M 440 90',  'L 580 90',
+  // Right petal (0° / 3 o'clock)
+  segments.push(`M ${cx} ${cy}`);
+  segments.push(`C ${cx + petalWidth * 0.6} ${cy - petalWidth * 0.75}, ${cx + petalLength} ${cy - petalWidth * 0.4}, ${cx + petalLength} ${cy}`);
+  segments.push(`C ${cx + petalLength} ${cy + petalWidth * 0.4}, ${cx + petalWidth * 0.6} ${cy + petalWidth * 0.75}, ${cx} ${cy}`);
 
-  // --- Level-2 sub-grid: center cell (230,230)→(370,370) ---
-  'M 230 300', 'L 370 300',
-  'M 300 230', 'L 300 370',
+  // Top petal (90° / 12 o'clock)
+  segments.push(`C ${cx - petalWidth * 0.75} ${cy - petalWidth * 0.6}, ${cx - petalWidth * 0.4} ${cy - petalLength}, ${cx} ${cy - petalLength}`);
+  segments.push(`C ${cx + petalWidth * 0.4} ${cy - petalLength}, ${cx + petalWidth * 0.75} ${cy - petalWidth * 0.6}, ${cx} ${cy}`);
 
-  // Level-3 within top-left cell: further quarter of 90px tile
-  'M 55 20',   'L 55 90',
-  'M 20 55',   'L 90 55',
+  // Left petal (180° / 9 o'clock)
+  segments.push(`C ${cx - petalWidth * 0.6} ${cy - petalWidth * 0.75}, ${cx - petalLength} ${cy - petalWidth * 0.4}, ${cx - petalLength} ${cy}`);
+  segments.push(`C ${cx - petalLength} ${cy + petalWidth * 0.4}, ${cx - petalWidth * 0.6} ${cy + petalWidth * 0.75}, ${cx} ${cy}`);
 
-  // --- Level-2 sub-grid: bottom-left cell (20,440)→(160,580) ---
-  'M 90 440',  'L 90 580',
-  'M 20 510',  'L 160 510',
+  // Bottom petal (270° / 6 o'clock)
+  segments.push(`C ${cx + petalWidth * 0.75} ${cy + petalWidth * 0.6}, ${cx + petalWidth * 0.4} ${cy + petalLength}, ${cx} ${cy + petalLength}`);
+  segments.push(`C ${cx - petalWidth * 0.4} ${cy + petalLength}, ${cx - petalWidth * 0.75} ${cy + petalWidth * 0.6}, ${cx} ${cy}`);
 
-  // --- Level-2 sub-grid: bottom-right cell (440,440)→(580,580) ---
-  'M 510 440', 'L 510 580',
-  'M 440 510', 'L 580 510',
+  // --- Inner clover outline (smaller, nested for fractal depth) ---
+  const innerScale = 0.55;
+  const iLen = petalLength * innerScale;
+  const iWid = petalWidth * innerScale;
 
-  // --- Diagonal cross-lines within center cell ---
-  'M 230 230', 'L 370 370',
-  'M 370 230', 'L 230 370',
+  // Right inner petal
+  segments.push(`M ${cx} ${cy}`);
+  segments.push(`C ${cx + iWid * 0.6} ${cy - iWid * 0.75}, ${cx + iLen} ${cy - iWid * 0.4}, ${cx + iLen} ${cy}`);
+  segments.push(`C ${cx + iLen} ${cy + iWid * 0.4}, ${cx + iWid * 0.6} ${cy + iWid * 0.75}, ${cx} ${cy}`);
 
-  // --- Additional level-2 cells for path length and complexity ---
-  // cell (160,20)→(300,160)
-  'M 230 20',  'L 230 160',
-  'M 160 90',  'L 300 90',
+  // Top inner petal
+  segments.push(`C ${cx - iWid * 0.75} ${cy - iWid * 0.6}, ${cx - iWid * 0.4} ${cy - iLen}, ${cx} ${cy - iLen}`);
+  segments.push(`C ${cx + iWid * 0.4} ${cy - iLen}, ${cx + iWid * 0.75} ${cy - iWid * 0.6}, ${cx} ${cy}`);
 
-  // cell (300,20)→(440,160)
-  'M 370 20',  'L 370 160',
-  'M 300 90',  'L 440 90',
+  // Left inner petal
+  segments.push(`C ${cx - iWid * 0.6} ${cy - iWid * 0.75}, ${cx - iLen} ${cy - iWid * 0.4}, ${cx - iLen} ${cy}`);
+  segments.push(`C ${cx - iLen} ${cy + iWid * 0.4}, ${cx - iWid * 0.6} ${cy + iWid * 0.75}, ${cx} ${cy}`);
 
-  // cell (20,160)→(160,300)
-  'M 90 160',  'L 90 300',
-  'M 20 230',  'L 160 230',
+  // Bottom inner petal
+  segments.push(`C ${cx + iWid * 0.75} ${cy + iWid * 0.6}, ${cx + iWid * 0.4} ${cy + iLen}, ${cx} ${cy + iLen}`);
+  segments.push(`C ${cx - iWid * 0.4} ${cy + iLen}, ${cx - iWid * 0.75} ${cy + iWid * 0.6}, ${cx} ${cy}`);
 
-  // cell (440,160)→(580,300)
-  'M 510 160', 'L 510 300',
-  'M 440 230', 'L 580 230',
+  // --- Structural vein lines (blueprint aesthetic) ---
 
-  // cell (20,300)→(160,440)
-  'M 90 300',  'L 90 440',
-  'M 20 370',  'L 160 370',
+  // Cardinal axis veins — center to petal tips
+  segments.push(`M ${cx} ${cy} L ${cx + petalLength} ${cy}`);   // Right
+  segments.push(`M ${cx} ${cy} L ${cx} ${cy - petalLength}`);    // Top
+  segments.push(`M ${cx} ${cy} L ${cx - petalLength} ${cy}`);    // Left
+  segments.push(`M ${cx} ${cy} L ${cx} ${cy + petalLength}`);    // Bottom
 
-  // cell (440,300)→(580,440)
-  'M 510 300', 'L 510 440',
-  'M 440 370', 'L 580 370',
+  // Diagonal axis veins — between petals
+  const diagLen = petalLength * 0.55;
+  segments.push(`M ${cx} ${cy} L ${cx + diagLen} ${cy - diagLen}`);  // NE
+  segments.push(`M ${cx} ${cy} L ${cx - diagLen} ${cy - diagLen}`);  // NW
+  segments.push(`M ${cx} ${cy} L ${cx - diagLen} ${cy + diagLen}`);  // SW
+  segments.push(`M ${cx} ${cy} L ${cx + diagLen} ${cy + diagLen}`);  // SE
 
-  // cell (160,440)→(300,580)
-  'M 230 440', 'L 230 580',
-  'M 160 510', 'L 300 510',
+  // --- Petal midline curves (inner vein structure) ---
+  // These arc slightly to follow the petal curvature, adding organic depth.
+  const veinOffset = petalLength * 0.65;
 
-  // cell (300,440)→(440,580)
-  'M 370 440', 'L 370 580',
-  'M 300 510', 'L 440 510',
-].join(' ');
+  // Right petal vein arcs
+  segments.push(`M ${cx + 30} ${cy - 15} Q ${cx + veinOffset} ${cy - 8}, ${cx + petalLength - 10} ${cy}`);
+  segments.push(`M ${cx + 30} ${cy + 15} Q ${cx + veinOffset} ${cy + 8}, ${cx + petalLength - 10} ${cy}`);
+
+  // Top petal vein arcs
+  segments.push(`M ${cx - 15} ${cy - 30} Q ${cx - 8} ${cy - veinOffset}, ${cx} ${cy - petalLength + 10}`);
+  segments.push(`M ${cx + 15} ${cy - 30} Q ${cx + 8} ${cy - veinOffset}, ${cx} ${cy - petalLength + 10}`);
+
+  // Left petal vein arcs
+  segments.push(`M ${cx - 30} ${cy - 15} Q ${cx - veinOffset} ${cy - 8}, ${cx - petalLength + 10} ${cy}`);
+  segments.push(`M ${cx - 30} ${cy + 15} Q ${cx - veinOffset} ${cy + 8}, ${cx - petalLength + 10} ${cy}`);
+
+  // Bottom petal vein arcs
+  segments.push(`M ${cx + 15} ${cy + 30} Q ${cx + 8} ${cy + veinOffset}, ${cx} ${cy + petalLength - 10}`);
+  segments.push(`M ${cx - 15} ${cy + 30} Q ${cx - 8} ${cy + veinOffset}, ${cx} ${cy + petalLength - 10}`);
+
+  // --- Outer geometric frame (subtle container) ---
+  const frame = petalLength + 40;
+  segments.push(`M ${cx - frame} ${cy - frame}`);
+  segments.push(`L ${cx + frame} ${cy - frame}`);
+  segments.push(`L ${cx + frame} ${cy + frame}`);
+  segments.push(`L ${cx - frame} ${cy + frame}`);
+  segments.push(`L ${cx - frame} ${cy - frame}`);
+
+  // --- Corner tick marks (engineering drawing convention) ---
+  const tickLen = 20;
+  // Top-left
+  segments.push(`M ${cx - frame} ${cy - frame + tickLen} L ${cx - frame} ${cy - frame} L ${cx - frame + tickLen} ${cy - frame}`);
+  // Top-right
+  segments.push(`M ${cx + frame - tickLen} ${cy - frame} L ${cx + frame} ${cy - frame} L ${cx + frame} ${cy - frame + tickLen}`);
+  // Bottom-right
+  segments.push(`M ${cx + frame} ${cy + frame - tickLen} L ${cx + frame} ${cy + frame} L ${cx + frame - tickLen} ${cy + frame}`);
+  // Bottom-left
+  segments.push(`M ${cx - frame + tickLen} ${cy + frame} L ${cx - frame} ${cy + frame} L ${cx - frame} ${cy + frame - tickLen}`);
+
+  // --- Center crosshair ---
+  const crossLen = 15;
+  segments.push(`M ${cx - crossLen} ${cy} L ${cx + crossLen} ${cy}`);
+  segments.push(`M ${cx} ${cy - crossLen} L ${cx} ${cy + crossLen}`);
+
+  return segments.join(' ');
+}
+
+const CLOVER_PATH = generateCloverPath();
 
 export function GeometryAccent({ className }: GeometryAccentProps) {
   const pathRef = useRef<SVGPathElement>(null);
@@ -137,7 +171,7 @@ export function GeometryAccent({ className }: GeometryAccentProps) {
       >
         <path
           ref={pathRef}
-          d={FRACTAL_PATH}
+          d={CLOVER_PATH}
           fill="none"
           stroke="currentColor"
           strokeWidth="1"
