@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 3 — Visual Primitives & Animation (Plan 02 of 03 complete)
+**Current focus:** Phase 3 — Visual Primitives & Animation (Complete — all 3/3 plans done)
 
 ## Current Position
 
 Phase: 3 of 6 (Visual Primitives & Animation)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-22 — Completed 03-02-PLAN.md (scroll animation wrappers)
+Plan: 3 of 3 in current phase
+Status: Phase complete — ready for Phase 4
+Last activity: 2026-02-23 — Completed 03-03-PLAN.md (HoverLift, link-underline, section validation)
 
-Progress: [████░░░░░░] ~33% (6/18 plans estimated)
+Progress: [████████░░] ~44% (8/18 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: ~6 min
-- Total execution time: ~0.60 hours
+- Total plans completed: 8
+- Average duration: ~5.5 min
+- Total execution time: ~0.73 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [████░░░░░░] ~33% (6/18 plans estimated)
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 24 min | 8 min |
 | 02-shell-navigation | 2/2 | ~7 min | ~3.5 min |
-| 03-visual-primitives-animation | 2/3 | ~12 min | ~6 min |
+| 03-visual-primitives-animation | 3/3 | ~17 min | ~5.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (2 min), 02-01 (~5 min), 02-02 (~2 min), 03-01 (~6 min), 03-02 (~6 min)
+- Last 5 plans: 02-01 (~5 min), 02-02 (~2 min), 03-01 (~6 min), 03-02 (~6 min), 03-03 (~5 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -75,6 +75,9 @@ Recent decisions affecting current work:
 - [03-02]: StaggerChildren is a plain div (no framer-motion) — animation entirely in StaggerItem, each self-managing viewport tracking
 - [03-02]: useReducedMotion returns boolean | null (null on SSR) — truthy check handles both true and null safely
 - [03-02]: viewport.amount 0.1 for StaggerItem (card-sized) vs 0.2 for FadeInOnScroll (section-level) — prevents flickering at edge
+- [03-03]: GeometryAccent hero pattern changed from fractal grid to four-leaf clover — brand identity for Clover Labs (user-requested during checkpoint review)
+- [03-03]: HoverLift uses willChange:'transform' hint for GPU compositing on whileHover elements — framer-motion may not auto-promote non-initially-animated layers
+- [03-03]: link-underline uses CSS ::after pseudo-element (not framer-motion) — simpler for text decoration, no JS overhead
 
 ### Pending Todos
 
@@ -88,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-22
-Stopped at: Completed 03-02-PLAN.md — FadeInOnScroll and StaggerChildren/StaggerItem components
+Last session: 2026-02-23
+Stopped at: Completed 03-03-PLAN.md — HoverLift, link-underline CSS utility, all 5 sections validated with GridPattern overlays; Phase 3 complete
 Resume file: None
