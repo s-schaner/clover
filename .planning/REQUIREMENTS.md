@@ -57,19 +57,19 @@ Requirements for the skeleton/framework site. Each maps to roadmap phases.
 
 ### Visual & Animation
 
-- [ ] **VISL-01**: Pure black & white color system — no accent colors, contrast and typography carry hierarchy
-- [ ] **VISL-02**: Geometric fractal SVG patterns as subtle background textures (controlled opacity, accent not wallpaper)
-- [ ] **VISL-03**: Scroll-triggered fade-in animations on viewport entry (not on mount), respects prefers-reduced-motion
-- [ ] **VISL-04**: Staggered children animations for card grids and list items
-- [ ] **VISL-05**: Hover lift/scale micro-interactions on interactive elements (cards, buttons, links)
-- [ ] **VISL-06**: Section alternation pattern — dark/light/dark/light rhythm using value contrast
+- [x] **VISL-01**: Pure black & white color system — no accent colors, contrast and typography carry hierarchy
+- [x] **VISL-02**: Geometric fractal SVG patterns as subtle background textures (controlled opacity, accent not wallpaper)
+- [x] **VISL-03**: Scroll-triggered fade-in animations on viewport entry (not on mount), respects prefers-reduced-motion
+- [x] **VISL-04**: Staggered children animations for card grids and list items
+- [x] **VISL-05**: Hover lift/scale micro-interactions on interactive elements (cards, buttons, links)
+- [x] **VISL-06**: Section alternation pattern — dark/light/dark/light rhythm using value contrast
 
 ### Layout & Responsive
 
 - [x] **LAYT-01**: Hybrid single-page scroll with anchor navigation (structured for future multi-page split)
 - [ ] **LAYT-02**: Fully responsive across desktop (1440px+), tablet (768px), and mobile (375px)
 - [x] **LAYT-03**: Section wrapper component providing consistent vertical rhythm, anchor IDs, and scroll-margin-top
-- [ ] **LAYT-04**: Minimalist geometry — clean lines, sharp angles, asymmetric layout moments, generous whitespace (120-160px section padding)
+- [x] **LAYT-04**: Minimalist geometry — clean lines, sharp angles, asymmetric layout moments, generous whitespace (120-160px section padding)
 
 ## v2 Requirements
 
@@ -149,16 +149,16 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-01 | Phase 4 | Pending |
 | CONT-02 | Phase 5 | Pending |
 | CONT-03 | Phase 5 | Pending |
-| VISL-01 | Phase 3 | Pending |
-| VISL-02 | Phase 3 | Pending |
-| VISL-03 | Phase 3 | Pending |
-| VISL-04 | Phase 3 | Pending |
-| VISL-05 | Phase 3 | Pending |
-| VISL-06 | Phase 3 | Pending |
+| VISL-01 | Phase 3 | Complete |
+| VISL-02 | Phase 3 | Complete |
+| VISL-03 | Phase 3 | Complete |
+| VISL-04 | Phase 3 | Complete |
+| VISL-05 | Phase 3 | Complete |
+| VISL-06 | Phase 3 | Complete |
 | LAYT-01 | Phase 2 | Complete |
 | LAYT-02 | Phase 6 | Pending |
 | LAYT-03 | Phase 2 | Complete |
-| LAYT-04 | Phase 3 | Pending |
+| LAYT-04 | Phase 3 | Complete |
 
 **Coverage:**
 - v1 requirements: 37 total
@@ -167,4 +167,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-22*
-*Last updated: 2026-02-22 after Phase 2 execution — NAV-01 through NAV-05, LAYT-01, LAYT-03 complete*
+*Last updated: 2026-02-23 after Phase 3 execution — VISL-01 through VISL-06, LAYT-04 complete*
