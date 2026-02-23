@@ -38,11 +38,11 @@
 
 :root {
   --nav-height: 80px;
-  --section-padding-y: clamp(5rem, 10vw, 10rem);
+  --section-padding-y: clamp(3.5rem, 8vw, 10rem);
   --section-padding-x: clamp(1.5rem, 5vw, 6rem);
   --card-padding: 2rem;
   --gap-grid: 1.5rem;
-  --text-hero: clamp(3rem, 8vw, 7rem);
+  --text-hero: clamp(2.25rem, 8vw, 7rem);
   --text-section: clamp(1.75rem, 4vw, 3rem);
   --pattern-opacity-dark: 0.06;
   --pattern-opacity-light: 0.04;

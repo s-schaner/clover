@@ -4,8 +4,8 @@
 // and GeometryAccent (client boundary) internally — this file itself is a Server Component.
 //
 // Structure:
-//   SectionWrapper (dark, min-h-screen)
-//     └── inner div (relative, min-h-screen flex centered)
+//   SectionWrapper (dark, min-h-[100dvh])
+//     └── inner div (relative, min-h-[100dvh] flex centered)
 //           ├── GeometryAccent (absolute full-bleed background, needs parent relative)
 //           └── content div (relative z-10 max-w-4xl centered text)
 //                 ├── FadeInOnScroll (delay 0.1) → h1 tagline
@@ -19,14 +19,15 @@ import { SECTION_IDS, HERO_CONTENT } from '@/lib/constants';
 
 export function HeroSection() {
   return (
-    <SectionWrapper id={SECTION_IDS.HERO} theme="dark" className="min-h-screen">
+    <SectionWrapper id={SECTION_IDS.HERO} theme="dark" className="min-h-[100dvh]">
       {/*
         Inner div retains px-[--section-padding-x] because hero does NOT use max-w-7xl.
         It needs horizontal padding for its centered flex layout.
         The parent SectionWrapper already applies py padding — so we only add px here.
         The `relative` class is required so GeometryAccent's `absolute inset-0` is contained.
+        min-h-[100dvh] accounts for mobile browser chrome (URL bar / navigation UI).
       */}
-      <div className="relative min-h-screen flex items-center justify-center px-[--section-padding-x]">
+      <div className="relative min-h-[100dvh] flex items-center justify-center px-[--section-padding-x]">
         {/* Four-leaf clover draw animation — brand visual, full-bleed behind text */}
         <GeometryAccent />
 

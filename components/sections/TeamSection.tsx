@@ -57,12 +57,12 @@ export function TeamSection() {
 
         {/*
           Card grid — all 4 team members with diagonal stagger cascade.
-          4 columns on lg (one per member), 2 on sm, 1 on mobile.
+          4 columns on md+ (one per member), 2 on mobile (375-767px).
           columns={4} in StaggerItem drives the diagonal delay computation.
           TeamCard has HoverLift built in — do NOT wrap in HoverLift.
           h-full on TeamCard for equal-height cards in the grid.
         */}
-        <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[--gap-grid]">
+        <StaggerChildren className="grid grid-cols-2 md:grid-cols-4 gap-[--gap-grid]">
           {TEAM_MEMBERS.map((member, i) => (
             <StaggerItem key={member.id} index={i} columns={4}>
               <TeamCard member={member} className="h-full" />
