@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 2 — Shell & Navigation (1/3 plans complete)
+**Current focus:** Phase 2 — Shell & Navigation (2/3 plans complete)
 
 ## Current Position
 
 Phase: 2 of 6 (Shell & Navigation)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-22 — Completed 02-01-PLAN.md (SectionWrapper & page scaffold)
+Last activity: 2026-02-22 — Completed 02-02-PLAN.md (Navigation component + root layout wiring)
 
-Progress: [███░░░░░░░] ~22% (4/18 plans estimated)
+Progress: [████░░░░░░] ~28% (5/18 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: ~7 min
-- Total execution time: ~0.47 hours
+- Total plans completed: 5
+- Average duration: ~6 min
+- Total execution time: ~0.50 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 24 min | 8 min |
-| 02-shell-navigation | 1/3 | ~5 min | ~5 min |
+| 02-shell-navigation | 2/3 | ~7 min | ~3.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (14 min), 01-02 (8 min), 01-03 (2 min), 02-01 (~5 min)
+- Last 5 plans: 01-01 (14 min), 01-02 (8 min), 01-03 (2 min), 02-01 (~5 min), 02-02 (~2 min)
 - Trend: Faster
 
 *Updated after each plan completion*
@@ -61,6 +61,9 @@ Recent decisions affecting current work:
 - [02-01]: Tailwind arbitrary value syntax py-[--section-padding-y] used for CSS custom property spacing — no var() wrapper needed in class names
 - [02-01]: Hero section gets min-h-screen on SectionWrapper (outer) AND inner div; all other sections only on inner div
 - [02-01]: SECTION_IDS.HERO used for hero conditional check (not string literal) — maintains single source of truth
+- [02-02]: Mobile overlay rendered INSIDE <header> element — inherits z-50 stacking context, avoids z-index conflicts with page content
+- [02-02]: aria-current="true" (not "page") for same-page anchor links — correct ARIA pattern for in-page navigation
+- [02-02]: activeSection initialized to SECTION_IDS.HERO so no nav link highlighted on page load (Hero not in NAV_LINKS)
 
 ### Pending Todos
 
@@ -76,5 +79,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 02-01-PLAN.md — SectionWrapper component created, all 5 sections wired in page.tsx
+Stopped at: Completed 02-02-PLAN.md — Navigation component created and wired into root layout; all Phase 2 nav criteria met
 Resume file: None
