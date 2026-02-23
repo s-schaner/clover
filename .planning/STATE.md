@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 5 — Section Builds (Phase 4 verified complete — all card atoms built)
+**Current focus:** Phase 5 — Section Builds (05-02 PortfolioSection complete)
 
 ## Current Position
 
 Phase: 5 of 6 (Section Builds)
-Plan: 0 of 5 in current phase
-Status: Ready for Phase 5 — Phase 4 verified complete (5/5 must-haves passed)
-Last activity: 2026-02-23 — Phase 4 verified and closed
+Plan: 2 of 5 in current phase
+Status: In progress — 05-02 PortfolioSection complete
+Last activity: 2026-02-23 — Completed 05-02-PLAN.md (PortfolioSection with category filter)
 
-Progress: [██████████] ~61% (11/18 plans estimated)
+Progress: [████████████] ~67% (12/18 plans estimated)
 
 ## Performance Metrics
 
@@ -33,7 +33,7 @@ Progress: [██████████] ~61% (11/18 plans estimated)
 | 04-card-components | 3/3 | ~17 min | ~5.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (~6 min), 03-03 (~5 min), 04-01 (~5 min), 04-02 (~4 min), 04-03 (~8 min)
+- Last 5 plans: 03-03 (~5 min), 04-01 (~5 min), 04-02 (~4 min), 04-03 (~8 min), 05-02 (~4 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -91,6 +91,10 @@ Recent decisions affecting current work:
 - [04-03]: CloverAccentMini positioned at cx=88 cy=28 in 120x120 viewBox — top-right of letter cluster, same cubic bezier petal formula as GeometryAccent
 - [04-03]: Social icons layout: flex justify-between on role row — role text left, social icons flex-shrink-0 right (CONTEXT.md inline integration)
 - [04-03]: ContactForm uses readOnly on inputs (not disabled) — only submit is disabled; preserves focusability for preview feel
+- [05-02]: 'All' prepended at component level in allFilters — PORTFOLIO_CATEGORIES in constants.ts does NOT include it
+- [05-02]: visibleItems rendered via .filter() and mapped directly — non-matching items not rendered (not hidden with CSS)
+- [05-02]: Security category shows empty grid — no empty state message; expected behavior (no Security items in PORTFOLIO_ITEMS)
+- [05-02]: FadeInOnScroll wraps heading block and pill row together for unified entrance animation
 
 ### Pending Todos
 
@@ -105,5 +109,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-23
-Stopped at: Phase 4 verified complete. Ready for Phase 5 (Section Builds)
+Stopped at: Completed 05-02-PLAN.md — PortfolioSection with category filter pills
 Resume file: None
