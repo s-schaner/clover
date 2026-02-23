@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import Navigation from '@/components/layout/Navigation';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -36,7 +37,10 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
       data-scroll-behavior="smooth"
     >
-      <body className="font-body">{children}</body>
+      <body className="font-body">
+        <Navigation />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
