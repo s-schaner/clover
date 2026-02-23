@@ -14,7 +14,7 @@ The Clover Labs skeleton website is built in a strict dependency-driven order: d
 - [x] **Phase 2: Shell & Navigation** - Build sticky navigation, scroll-spy, mobile menu, section wrapper, and layout skeleton
 - [x] **Phase 3: Visual Primitives & Animation** - Create geometric fractal patterns, geometry accents, and motion wrapper components
 - [x] **Phase 4: Card Components** - Build all UI card atoms — service, portfolio, team, contact form, fractal hero element
-- [ ] **Phase 5: Section Builds** - Implement all five content sections (Hero, Services, Portfolio, Team, Contact)
+- [x] **Phase 5: Section Builds** - Implement all five content sections (Hero, Services, Portfolio, Team, Contact)
 - [ ] **Phase 6: Assembly, Polish & Documentation** - Assemble page, verify responsiveness, tune section transitions, write design system docs
 
 ## Phase Details
@@ -104,10 +104,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Build HeroSection and ServicesSection components (Wave 1)
-- [ ] 05-02-PLAN.md — Build PortfolioSection with category filter pills (Wave 1)
-- [ ] 05-03-PLAN.md — Build TeamSection and ContactSection components (Wave 1)
-- [ ] 05-04-PLAN.md — Wire page.tsx with section imports and verify build (Wave 2)
+- [x] 05-01-PLAN.md — Build HeroSection and ServicesSection components (Wave 1)
+- [x] 05-02-PLAN.md — Build PortfolioSection with category filter pills (Wave 1)
+- [x] 05-03-PLAN.md — Build TeamSection and ContactSection components (Wave 1)
+- [x] 05-04-PLAN.md — Wire page.tsx with section imports and verify build (Wave 2)
 
 ---
 
@@ -140,9 +140,9 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 2. Shell & Navigation | 2/2 | Complete | 2026-02-22 |
 | 3. Visual Primitives & Animation | 3/3 | Complete | 2026-02-23 |
 | 4. Card Components | 3/3 | Complete | 2026-02-23 |
-| 5. Section Builds | 0/4 | Not started | - |
+| 5. Section Builds | 4/4 | Complete | 2026-02-23 |
 | 6. Assembly, Polish & Documentation | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-02-22*
-*Last updated: 2026-02-23 after Phase 4 execution complete*
+*Last updated: 2026-02-23 after Phase 5 execution complete*
