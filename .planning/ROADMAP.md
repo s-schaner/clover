@@ -101,14 +101,13 @@ Plans:
   3. The portfolio section shows capability category groupings (e.g., AI/ML, Cloud Infrastructure, Custom Software) with placeholder project cards underneath each, and clicking a category filters the visible cards
   4. The team section shows profile cards for Mike Wong, Matt Drapp, Peter Kwon, and Stefan Schaner — each with geometric avatar, placeholder role title, and social link icons (placeholder hrefs)
   5. The contact section displays a clickable mailto email link, an Ashburn, Virginia location indicator with minimal pin graphic, and the disabled contact form
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 05-01: Build Hero section — full-viewport, positioning tagline, animated geometric fractal background
-- [ ] 05-02: Build Services section — capability area cards with technical descriptions and geometric icons
-- [ ] 05-03: Build Portfolio section — category groupings, placeholder project cards, category filter
-- [ ] 05-04: Build Team section — four owner profile cards with geometric avatars, roles, and social links
-- [ ] 05-05: Build Contact section — email mailto link, Ashburn VA location display, disabled form
+- [ ] 05-01-PLAN.md — Build HeroSection and ServicesSection components (Wave 1)
+- [ ] 05-02-PLAN.md — Build PortfolioSection with category filter pills (Wave 1)
+- [ ] 05-03-PLAN.md — Build TeamSection and ContactSection components (Wave 1)
+- [ ] 05-04-PLAN.md — Wire page.tsx with section imports and verify build (Wave 2)
 
 ---
 
@@ -141,7 +140,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 2. Shell & Navigation | 2/2 | Complete | 2026-02-22 |
 | 3. Visual Primitives & Animation | 3/3 | Complete | 2026-02-23 |
 | 4. Card Components | 3/3 | Complete | 2026-02-23 |
-| 5. Section Builds | 0/5 | Not started | - |
+| 5. Section Builds | 0/4 | Not started | - |
 | 6. Assembly, Polish & Documentation | 0/3 | Not started | - |
 
 ---
