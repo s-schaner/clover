@@ -46,12 +46,11 @@ Plans:
   2. Clicking any nav anchor link smooth-scrolls to the correct section position with proper offset for the sticky header height
   3. The nav link for the currently visible section is highlighted — the active state updates automatically as the user scrolls
   4. On mobile, a hamburger icon opens a full-screen overlay menu; focus is trapped inside the overlay; Escape or a close tap dismisses it
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Build SectionWrapper component with anchor IDs, scroll-margin-top, and consistent vertical rhythm
-- [ ] 02-02: Build Navigation component — sticky header, wordmark, desktop anchor links, smooth scroll, scroll-spy active state
-- [ ] 02-03: Build mobile hamburger menu with overlay, focus trap, and Escape key dismissal
+- [ ] 02-01-PLAN.md — Build SectionWrapper component and wire placeholder sections into page.tsx (Wave 1)
+- [ ] 02-02-PLAN.md — Build Navigation component with scroll-spy, mobile hamburger overlay, focus trap, and wire into layout.tsx (Wave 2)
 
 ---
 
@@ -139,7 +138,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 3/3 | Complete ✓ | 2026-02-22 |
-| 2. Shell & Navigation | 0/3 | Not started | - |
+| 2. Shell & Navigation | 0/2 | Not started | - |
 | 3. Visual Primitives & Animation | 0/3 | Not started | - |
 | 4. Card Components | 0/3 | Not started | - |
 | 5. Section Builds | 0/5 | Not started | - |
@@ -147,4 +146,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 ---
 *Roadmap created: 2026-02-22*
-*Last updated: 2026-02-22 after Phase 1 execution complete*
+*Last updated: 2026-02-22 after Phase 2 planning complete*
