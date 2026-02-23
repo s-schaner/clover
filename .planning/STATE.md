@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-22)
 ## Current Position
 
 Phase: 4 of 6 (Card Components)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-23 — Completed 04-01-PLAN.md (ServiceCard with geometric SVG icons, HERO-03 verified)
+Last activity: 2026-02-23 — Completed 04-02-PLAN.md (PortfolioCard with typed anatomy and data-category filter readiness)
 
-Progress: [█████████░] ~50% (9/18 plans estimated)
+Progress: [█████████░] ~56% (10/18 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: ~5.4 min
-- Total execution time: ~0.82 hours
+- Total plans completed: 10
+- Average duration: ~5.2 min
+- Total execution time: ~0.87 hours
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [█████████░] ~50% (9/18 plans estimated)
 | 01-foundation-design-system | 3/3 | 24 min | 8 min |
 | 02-shell-navigation | 2/2 | ~7 min | ~3.5 min |
 | 03-visual-primitives-animation | 3/3 | ~17 min | ~5.7 min |
-| 04-card-components | 1/3 | ~5 min | ~5 min |
+| 04-card-components | 2/3 | ~9 min | ~4.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (~2 min), 03-01 (~6 min), 03-02 (~6 min), 03-03 (~5 min), 04-01 (~5 min)
-- Trend: Stable
+- Last 5 plans: 03-01 (~6 min), 03-02 (~6 min), 03-03 (~5 min), 04-01 (~5 min), 04-02 (~4 min)
+- Trend: Slightly faster
 
 *Updated after each plan completion*
 
@@ -83,6 +83,10 @@ Recent decisions affecting current work:
 - [04-01]: HoverLift built into ServiceCard atom — Phase 5 consumers render <ServiceCard item={...} /> with no wrapper
 - [04-01]: HERO-03 verified satisfied by GeometryAccent — animated four-leaf clover draw via CSS stroke-dashoffset, no new hero component needed
 - [04-01]: Icon color via text-on-surface-light-subtle wrapper div — currentColor resolves correctly without hardcoding
+- [04-02]: data-category holds raw PortfolioCategory string (e.g. "AI/ML") — not slugified — Phase 5 matches against raw values
+- [04-02]: article element chosen as inner container — semantically correct for self-contained portfolio content units
+- [04-02]: font-mono on tech tag spans (JetBrains Mono code accent) — distinguishes tech stack from prose text in dark-themed card
+- [04-02]: mt-auto on tags row pushes tech tags to card bottom in flex-col layout — consistent alignment across variable-height cards
 
 ### Pending Todos
 
@@ -97,5 +101,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-23
-Stopped at: Completed 04-01-PLAN.md — ServiceCard created, HERO-03 verified
+Stopped at: Completed 04-02-PLAN.md — PortfolioCard created with typed anatomy and data-category filter readiness
 Resume file: None
