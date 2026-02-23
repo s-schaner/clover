@@ -63,12 +63,12 @@ Plans:
   2. Scroll-triggered fade-in animations activate on viewport entry — not on page mount — and are completely absent when `prefers-reduced-motion: reduce` is set
   3. Card grid stagger animations play in sequence rather than simultaneously when a grid enters the viewport
   4. Interactive elements visually lift or scale on hover via consistent micro-interaction, and the dark/light section alternation pattern (dark-light-dark-light rhythm) is validated as providing sufficient value contrast without color
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: Build GridPattern and GeometryAccent SVG components — geometric fractal patterns with opacity and density props
-- [ ] 03-02: Build FadeInOnScroll and StaggerChildren motion wrappers with IntersectionObserver, prefers-reduced-motion, and GPU-composited properties only
-- [ ] 03-03: Build HoverLift motion wrapper and validate section alternation dark/light contrast rhythm
+- [ ] 03-01-PLAN.md — Build GridPattern recursive fractal SVG and GeometryAccent hero draw animation components (Wave 1)
+- [ ] 03-02-PLAN.md — Build FadeInOnScroll and StaggerChildren diagonal cascade motion wrappers (Wave 1)
+- [ ] 03-03-PLAN.md — Build HoverLift wrapper, link-underline CSS, and validate section alternation with all primitives (Wave 2)
 
 ---
 
