@@ -18,11 +18,11 @@ Requirements for the skeleton/framework site. Each maps to roadmap phases.
 
 ### Navigation
 
-- [ ] **NAV-01**: Sticky header with anchor links to each section (Hero, Services, Portfolio, Team, Contact)
-- [ ] **NAV-02**: Scroll-spy active state — nav highlights current section based on scroll position
-- [ ] **NAV-03**: Mobile hamburger menu with overlay and proper focus management
-- [ ] **NAV-04**: Logo/wordmark ("Clover Labs") displayed in navigation header
-- [ ] **NAV-05**: Smooth scroll behavior on anchor link clicks
+- [x] **NAV-01**: Sticky header with anchor links to each section (Hero, Services, Portfolio, Team, Contact)
+- [x] **NAV-02**: Scroll-spy active state — nav highlights current section based on scroll position
+- [x] **NAV-03**: Mobile hamburger menu with overlay and proper focus management
+- [x] **NAV-04**: Logo/wordmark ("Clover Labs") displayed in navigation header
+- [x] **NAV-05**: Smooth scroll behavior on anchor link clicks
 
 ### Hero
 
@@ -66,9 +66,9 @@ Requirements for the skeleton/framework site. Each maps to roadmap phases.
 
 ### Layout & Responsive
 
-- [ ] **LAYT-01**: Hybrid single-page scroll with anchor navigation (structured for future multi-page split)
+- [x] **LAYT-01**: Hybrid single-page scroll with anchor navigation (structured for future multi-page split)
 - [ ] **LAYT-02**: Fully responsive across desktop (1440px+), tablet (768px), and mobile (375px)
-- [ ] **LAYT-03**: Section wrapper component providing consistent vertical rhythm, anchor IDs, and scroll-margin-top
+- [x] **LAYT-03**: Section wrapper component providing consistent vertical rhythm, anchor IDs, and scroll-margin-top
 - [ ] **LAYT-04**: Minimalist geometry — clean lines, sharp angles, asymmetric layout moments, generous whitespace (120-160px section padding)
 
 ## v2 Requirements
@@ -128,11 +128,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FNDN-04 | Phase 1 | Complete |
 | FNDN-05 | Phase 1 | Complete |
 | FNDN-06 | Phase 1 | Complete |
-| NAV-01 | Phase 2 | Pending |
-| NAV-02 | Phase 2 | Pending |
-| NAV-03 | Phase 2 | Pending |
-| NAV-04 | Phase 2 | Pending |
-| NAV-05 | Phase 2 | Pending |
+| NAV-01 | Phase 2 | Complete |
+| NAV-02 | Phase 2 | Complete |
+| NAV-03 | Phase 2 | Complete |
+| NAV-04 | Phase 2 | Complete |
+| NAV-05 | Phase 2 | Complete |
 | HERO-01 | Phase 5 | Pending |
 | HERO-02 | Phase 5 | Pending |
 | HERO-03 | Phase 4 | Pending |
@@ -155,9 +155,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VISL-04 | Phase 3 | Pending |
 | VISL-05 | Phase 3 | Pending |
 | VISL-06 | Phase 3 | Pending |
-| LAYT-01 | Phase 2 | Pending |
+| LAYT-01 | Phase 2 | Complete |
 | LAYT-02 | Phase 6 | Pending |
-| LAYT-03 | Phase 2 | Pending |
+| LAYT-03 | Phase 2 | Complete |
 | LAYT-04 | Phase 3 | Pending |
 
 **Coverage:**
@@ -167,4 +167,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-22*
-*Last updated: 2026-02-22 after Phase 1 execution — FNDN-01 through FNDN-06 complete*
+*Last updated: 2026-02-22 after Phase 2 execution — NAV-01 through NAV-05, LAYT-01, LAYT-03 complete*

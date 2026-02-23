@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 2 — Shell & Navigation (2/3 plans complete)
+**Current focus:** Phase 3 — Visual Primitives & Animation (Phase 2 complete)
 
 ## Current Position
 
-Phase: 2 of 6 (Shell & Navigation)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-22 — Completed 02-02-PLAN.md (Navigation component + root layout wiring)
+Phase: 3 of 6 (Visual Primitives & Animation)
+Plan: 0 of 3 in current phase
+Status: Ready to plan
+Last activity: 2026-02-22 — Phase 2 verified and complete (7/7 requirements passed)
 
 Progress: [████░░░░░░] ~28% (5/18 plans estimated)
 
@@ -28,7 +28,7 @@ Progress: [████░░░░░░] ~28% (5/18 plans estimated)
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 24 min | 8 min |
-| 02-shell-navigation | 2/3 | ~7 min | ~3.5 min |
+| 02-shell-navigation | 2/2 | ~7 min | ~3.5 min |
 
 **Recent Trend:**
 - Last 5 plans: 01-01 (14 min), 01-02 (8 min), 01-03 (2 min), 02-01 (~5 min), 02-02 (~2 min)
@@ -64,6 +64,8 @@ Recent decisions affecting current work:
 - [02-02]: Mobile overlay rendered INSIDE <header> element — inherits z-50 stacking context, avoids z-index conflicts with page content
 - [02-02]: aria-current="true" (not "page") for same-page anchor links — correct ARIA pattern for in-page navigation
 - [02-02]: activeSection initialized to SECTION_IDS.HERO so no nav link highlighted on page load (Hero not in NAV_LINKS)
+- [02-verify]: data-scroll-behavior="smooth" is a Next.js 16 router signal only — must also add CSS rule `html[data-scroll-behavior="smooth"] { scroll-behavior: smooth }` for actual smooth scrolling
+- [02-verify]: page.tsx uses fragment (<>) not <main> — layout.tsx already wraps children in <main>, avoiding nested <main> HTML spec violation
 
 ### Pending Todos
 
@@ -79,5 +81,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 02-02-PLAN.md — Navigation component created and wired into root layout; all Phase 2 nav criteria met
+Stopped at: Phase 2 complete and verified — ready to plan Phase 3
 Resume file: None

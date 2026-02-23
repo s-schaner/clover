@@ -11,7 +11,7 @@ The Clover Labs skeleton website is built in a strict dependency-driven order: d
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Foundation & Design System** - Scaffold Next.js, define all design tokens, type interfaces, and content constants
-- [ ] **Phase 2: Shell & Navigation** - Build sticky navigation, scroll-spy, mobile menu, section wrapper, and layout skeleton
+- [x] **Phase 2: Shell & Navigation** - Build sticky navigation, scroll-spy, mobile menu, section wrapper, and layout skeleton
 - [ ] **Phase 3: Visual Primitives & Animation** - Create geometric fractal patterns, geometry accents, and motion wrapper components
 - [ ] **Phase 4: Card Components** - Build all UI card atoms — service, portfolio, team, contact form, fractal hero element
 - [ ] **Phase 5: Section Builds** - Implement all five content sections (Hero, Services, Portfolio, Team, Contact)
@@ -49,8 +49,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Build SectionWrapper component and wire placeholder sections into page.tsx (Wave 1)
-- [ ] 02-02-PLAN.md — Build Navigation component with scroll-spy, mobile hamburger overlay, focus trap, and wire into layout.tsx (Wave 2)
+- [x] 02-01-PLAN.md — Build SectionWrapper component and wire placeholder sections into page.tsx (Wave 1)
+- [x] 02-02-PLAN.md — Build Navigation component with scroll-spy, mobile hamburger overlay, focus trap, and wire into layout.tsx (Wave 2)
 
 ---
 
@@ -138,7 +138,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 3/3 | Complete ✓ | 2026-02-22 |
-| 2. Shell & Navigation | 0/2 | Not started | - |
+| 2. Shell & Navigation | 2/2 | Complete ✓ | 2026-02-22 |
 | 3. Visual Primitives & Animation | 0/3 | Not started | - |
 | 4. Card Components | 0/3 | Not started | - |
 | 5. Section Builds | 0/5 | Not started | - |
@@ -146,4 +146,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 ---
 *Roadmap created: 2026-02-22*
-*Last updated: 2026-02-22 after Phase 2 planning complete*
+*Last updated: 2026-02-22 after Phase 2 execution complete*
