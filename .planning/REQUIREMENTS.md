@@ -67,7 +67,7 @@ Requirements for the skeleton/framework site. Each maps to roadmap phases.
 ### Layout & Responsive
 
 - [x] **LAYT-01**: Hybrid single-page scroll with anchor navigation (structured for future multi-page split)
-- [ ] **LAYT-02**: Fully responsive across desktop (1440px+), tablet (768px), and mobile (375px)
+- [x] **LAYT-02**: Fully responsive across desktop (1440px+), tablet (768px), and mobile (375px)
 - [x] **LAYT-03**: Section wrapper component providing consistent vertical rhythm, anchor IDs, and scroll-margin-top
 - [x] **LAYT-04**: Minimalist geometry — clean lines, sharp angles, asymmetric layout moments, generous whitespace (120-160px section padding)
 
@@ -156,7 +156,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VISL-05 | Phase 3 | Complete |
 | VISL-06 | Phase 3 | Complete |
 | LAYT-01 | Phase 2 | Complete |
-| LAYT-02 | Phase 6 | Pending |
+| LAYT-02 | Phase 6 | Complete |
 | LAYT-03 | Phase 2 | Complete |
 | LAYT-04 | Phase 3 | Complete |
 
@@ -167,4 +167,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-22*
-*Last updated: 2026-02-23 after Phase 5 execution — HERO-01, HERO-02, SERV-01, SERV-02, PORT-01, PORT-03, TEAM-01, TEAM-03, TEAM-04, CONT-02, CONT-03 complete*
+*Last updated: 2026-02-23 after Phase 6 execution — LAYT-02 complete. All 37 v1 requirements satisfied.*
