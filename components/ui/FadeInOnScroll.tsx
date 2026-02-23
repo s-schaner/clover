@@ -8,16 +8,16 @@
 // Easing matches --ease-premium: cubic-bezier(0.21, 0.47, 0.32, 0.98).
 // Duration matches --duration-slow: 600ms.
 //
+// SSR safety: Uses useEffect to defer initial={opacity:0} until after hydration.
+// This prevents Framer Motion from baking opacity:0 into the SSR HTML, which can
+// cause permanently invisible content if the IntersectionObserver doesn't fire.
+//
 // Reduced-motion: When prefers-reduced-motion is set, children are rendered at full
 // visibility immediately with no animation — no opacity:0 flash, no transform.
-//
-// Note on the `as` prop: The `as` prop exists for future flexibility, but this component
-// always renders a motion.div internally. If you need a specific semantic element
-// (e.g. <section>, <article>), wrap FadeInOnScroll in the appropriate element.
 
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 interface FadeInOnScrollProps {
@@ -25,7 +25,7 @@ interface FadeInOnScrollProps {
   className?: string;
   delay?: number;       // seconds, default 0
   y?: number;           // travel distance in px, default 40
-  as?: React.ElementType; // render as different element (for future flexibility — see note above)
+  as?: React.ElementType; // render as different element (for future flexibility)
 }
 
 export function FadeInOnScroll({
@@ -36,11 +36,21 @@ export function FadeInOnScroll({
   as: Tag = 'div',
 }: FadeInOnScrollProps) {
   const shouldReduceMotion = useReducedMotion();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   // Reduced-motion: render a plain element at full visibility. No animation, no opacity flash.
-  // This is the critical accessibility requirement: content must be immediately accessible.
   if (shouldReduceMotion) {
     return <Tag className={className}>{children}</Tag>;
+  }
+
+  // Before hydration: render visible (no opacity:0 in SSR HTML).
+  // After hydration: animate with whileInView.
+  if (!hasMounted) {
+    return <div className={className}>{children}</div>;
   }
 
   return (
@@ -48,7 +58,7 @@ export function FadeInOnScroll({
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.15 }}
       transition={{
         duration: 0.6,
         ease: [0.21, 0.47, 0.32, 0.98],

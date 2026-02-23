@@ -14,21 +14,16 @@
 // - StaggerItem: individual animated card — each item independently tracks viewport
 //   entry via whileInView. No parent-child stagger propagation.
 //
-// Usage pattern:
-//   <StaggerChildren className="grid grid-cols-3 gap-6">
-//     {items.map((item, i) => (
-//       <StaggerItem key={item.id} index={i} columns={3}>
-//         <Card {...item} />
-//       </StaggerItem>
-//     ))}
-//   </StaggerChildren>
+// SSR safety: Uses useEffect to defer initial={opacity:0} until after hydration.
+// This prevents Framer Motion from baking opacity:0 into SSR HTML, which can cause
+// permanently invisible content if IntersectionObserver doesn't fire after hydration.
 //
 // Reduced-motion: When prefers-reduced-motion is set, all items render at full
 // visibility immediately — no animation, no stagger, no opacity flash.
 
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 // ---------------------------------------------------------------------------
@@ -65,17 +60,27 @@ export function StaggerItem({
   staggerInterval = 0.08,
 }: StaggerItemProps) {
   const shouldReduceMotion = useReducedMotion();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   // Compute position in grid
   const row = Math.floor(index / columns);
   const col = index % columns;
 
   // Diagonal delay: items on the same diagonal (row + col = constant) animate simultaneously.
-  // This creates the top-left cascade effect described in CONTEXT.md.
   const delay = (row + col) * staggerInterval;
 
   // Reduced-motion: render at full visibility, no animation.
   if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
+  // Before hydration: render visible (no opacity:0 in SSR HTML).
+  // After hydration: animate with whileInView.
+  if (!hasMounted) {
     return <div className={className}>{children}</div>;
   }
 
