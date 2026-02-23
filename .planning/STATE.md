@@ -67,6 +67,10 @@ Recent decisions affecting current work:
 - [02-02]: activeSection initialized to SECTION_IDS.HERO so no nav link highlighted on page load (Hero not in NAV_LINKS)
 - [02-verify]: data-scroll-behavior="smooth" is a Next.js 16 router signal only — must also add CSS rule `html[data-scroll-behavior="smooth"] { scroll-behavior: smooth }` for actual smooth scrolling
 - [02-verify]: page.tsx uses fragment (<>) not <main> — layout.tsx already wraps children in <main>, avoiding nested <main> HTML spec violation
+- [03-01]: SVG pattern id attributes must not contain colons — useId() output (":r0:") sanitized by replacing colons with "gp" prefix
+- [03-01]: maskImage applied to wrapper div (not SVG element directly) — CSS mask-image on SVG elements has inconsistent browser support
+- [03-01]: Hero draw animation uses CSS @keyframes (not Framer Motion) — CONTEXT.md constraint: hero visual locked to CSS+SVG only
+- [03-01]: SectionWrapper does NOT add position: relative — consuming sections that use GridPattern/GeometryAccent must add it via className
 - [03-02]: framer-motion 12 staggerChildren is deprecated — use manual (row + col) * staggerInterval delay per StaggerItem for diagonal cascade
 - [03-02]: StaggerChildren is a plain div (no framer-motion) — animation entirely in StaggerItem, each self-managing viewport tracking
 - [03-02]: useReducedMotion returns boolean | null (null on SSR) — truthy check handles both true and null safely
