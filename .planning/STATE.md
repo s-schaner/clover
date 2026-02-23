@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 5 — Section Builds (05-01 HeroSection + ServicesSection, 05-02 PortfolioSection complete)
+**Current focus:** Phase 5 — Section Builds (05-01 HeroSection + ServicesSection, 05-02 PortfolioSection, 05-03 TeamSection + ContactSection complete)
 
 ## Current Position
 
 Phase: 5 of 6 (Section Builds)
-Plan: 2 of 5 in current phase (05-01 and 05-02 complete)
-Status: In progress — 05-01 HeroSection + ServicesSection complete
-Last activity: 2026-02-23 — Completed 05-01-PLAN.md (HeroSection and ServicesSection)
+Plan: 3 of 5 in current phase (05-01, 05-02, 05-03 complete)
+Status: In progress — 05-03 TeamSection + ContactSection complete
+Last activity: 2026-02-23 — Completed 05-03-PLAN.md (TeamSection and ContactSection)
 
-Progress: [████████████] ~67% (12/18 plans estimated)
+Progress: [█████████████] ~72% (13/18 plans estimated)
 
 ## Performance Metrics
 
@@ -31,10 +31,11 @@ Progress: [████████████] ~67% (12/18 plans estimated)
 | 02-shell-navigation | 2/2 | ~7 min | ~3.5 min |
 | 03-visual-primitives-animation | 3/3 | ~17 min | ~5.7 min |
 | 04-card-components | 3/3 | ~17 min | ~5.7 min |
+| 05-section-builds | 3/5 (in progress) | ~8 min | ~2.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-03 (~5 min), 04-01 (~5 min), 04-02 (~4 min), 04-03 (~8 min), 05-02 (~4 min)
-- Trend: Stable
+- Last 5 plans: 04-02 (~4 min), 04-03 (~8 min), 05-01 (~4 min), 05-02 (~4 min), 05-03 (~2 min)
+- Trend: Stable, accelerating as patterns repeat
 
 *Updated after each plan completion*
 
@@ -99,6 +100,11 @@ Recent decisions affecting current work:
 - [05-02]: visibleItems rendered via .filter() and mapped directly — non-matching items not rendered (not hidden with CSS)
 - [05-02]: Security category shows empty grid — no empty state message; expected behavior (no Security items in PORTFOLIO_ITEMS)
 - [05-02]: FadeInOnScroll wraps heading block and pill row together for unified entrance animation
+- [05-03]: TeamSection uses lg:grid-cols-4 (not 3) — one column per founder; StaggerItem columns={4} for correct diagonal delay
+- [05-03]: ContactSection two-column layout: contact details left, ContactForm right on lg+; stacked on mobile
+- [05-03]: No intro paragraph in ContactSection per CONTEXT.md "Just the disabled form" constraint
+- [05-03]: [&_form]:max-w-none wrapper overrides ContactForm baked-in max-w-lg — ContactForm has no className prop
+- [05-03]: SVG map pin is inline hand-crafted (teardrop path + filled circle), 12x16 viewBox, stroke=currentColor
 
 ### Pending Todos
 
@@ -113,5 +119,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-23
-Stopped at: Completed 05-01-PLAN.md — HeroSection and ServicesSection (05-01 and 05-02 both complete)
+Stopped at: Completed 05-03-PLAN.md — TeamSection and ContactSection (05-01, 05-02, 05-03 complete)
 Resume file: None
