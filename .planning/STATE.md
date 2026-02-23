@@ -5,32 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 2 — Shell & Navigation (Phase 1 complete)
+**Current focus:** Phase 2 — Shell & Navigation (1/3 plans complete)
 
 ## Current Position
 
 Phase: 2 of 6 (Shell & Navigation)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-02-22 — Phase 1 verified and complete (4/4 must-haves passed)
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-22 — Completed 02-01-PLAN.md (SectionWrapper & page scaffold)
 
-Progress: [██░░░░░░░░] ~17% (3/18 plans estimated)
+Progress: [███░░░░░░░] ~22% (4/18 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 8 min
-- Total execution time: 0.40 hours
+- Total plans completed: 4
+- Average duration: ~7 min
+- Total execution time: ~0.47 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 24 min | 8 min |
+| 02-shell-navigation | 1/3 | ~5 min | ~5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (14 min), 01-02 (8 min), 01-03 (2 min)
+- Last 5 plans: 01-01 (14 min), 01-02 (8 min), 01-03 (2 min), 02-01 (~5 min)
 - Trend: Faster
 
 *Updated after each plan completion*
@@ -57,6 +58,9 @@ Recent decisions affecting current work:
 - [01-03]: PortfolioCategory is type alias (union) not interface — correct TypeScript pattern for discriminated unions
 - [01-03]: TechTag kept as interface (not string) — preserves ability to add icon/color fields without breaking PortfolioItem
 - [01-03]: Team member roles set to placeholder "Co-Founder & Principal Engineer" with comment — real names committed, titles pending owner confirmation
+- [02-01]: Tailwind arbitrary value syntax py-[--section-padding-y] used for CSS custom property spacing — no var() wrapper needed in class names
+- [02-01]: Hero section gets min-h-screen on SectionWrapper (outer) AND inner div; all other sections only on inner div
+- [02-01]: SECTION_IDS.HERO used for hero conditional check (not string literal) — maintains single source of truth
 
 ### Pending Todos
 
@@ -72,5 +76,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Phase 1 complete and verified — ready to plan Phase 2
+Stopped at: Completed 02-01-PLAN.md — SectionWrapper component created, all 5 sections wired in page.tsx
 Resume file: None
