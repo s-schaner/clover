@@ -558,7 +558,7 @@ Single source of truth for all static content. Every component that displays con
 ```
 
 3. No component changes needed. `TeamSection` maps `TEAM_MEMBERS` automatically.
-4. Check the grid: `TeamSection` uses `lg:grid-cols-4`. Adding a 5th member will cause the grid to wrap — you may need to change the grid to `lg:grid-cols-3 xl:grid-cols-5` or similar. Update `StaggerItem columns={N}` to match.
+4. Check the grid: `TeamSection` uses `md:grid-cols-4`. Adding a 5th member will cause the grid to wrap — you may need to change the grid to `md:grid-cols-3 lg:grid-cols-5` or similar. Update `StaggerItem columns={N}` to match.
 
 ---
 
