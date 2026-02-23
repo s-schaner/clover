@@ -111,6 +111,9 @@ Recent decisions affecting current work:
 - [06-01]: TeamSection changed from lg:grid-cols-4 to grid-cols-2 md:grid-cols-4 — 2-col on mobile, 4-col at 768px tablet (note: supersedes [05-03] lg:grid-cols-4 entry)
 - [06-01]: HeroSection changed from min-h-screen to min-h-[100dvh] — dvh accounts for mobile browser chrome (iOS Safari / Android Chrome address bar)
 - [06-01]: globals.css --text-hero clamp min reduced 3rem→2.25rem and --section-padding-y min reduced 5rem→3.5rem — hero fits in viewport at 375px without scrolling
+- [06-02]: optimizePackageImports for lucide-react in next.config.ts — tree-shakes icon library to only bundle Menu + X (2 of 500+ icons), isolated to single 15.5KB chunk
+- [06-02]: next/font self-hosting confirmed deterministic — 17 woff2 files in .next/static/media/ at build time; no Google Fonts CDN requests by design
+- [06-02]: Lighthouse CLI requires Chrome browser — not available in headless environments; manual audit via Chrome DevTools Lighthouse tab recommended (expected 90+)
 - [06-03]: Documentation pattern: all values extracted from actual source (globals.css, TypeScript files) — not stale planning docs
 - [06-03]: HoverLift built-in warning documented for ServiceCard/PortfolioCard/TeamCard — prevents double-wrapping bug
 - [06-03]: Adding 5th team member requires TeamSection grid-cols update — grid-cols-4 breaks with 5 items
@@ -129,5 +132,5 @@ None — all phases complete.
 ## Session Continuity
 
 Last session: 2026-02-23
-Stopped at: Completed 06-03-PLAN.md — all 6 phases complete. Site built, polished, and documented.
+Stopped at: Completed 06-02-PLAN.md — next.config.ts optimized, SUMMARY created.
 Resume file: None
