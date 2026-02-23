@@ -15,7 +15,7 @@ The Clover Labs skeleton website is built in a strict dependency-driven order: d
 - [x] **Phase 3: Visual Primitives & Animation** - Create geometric fractal patterns, geometry accents, and motion wrapper components
 - [x] **Phase 4: Card Components** - Build all UI card atoms — service, portfolio, team, contact form, fractal hero element
 - [x] **Phase 5: Section Builds** - Implement all five content sections (Hero, Services, Portfolio, Team, Contact)
-- [ ] **Phase 6: Assembly, Polish & Documentation** - Assemble page, verify responsiveness, tune section transitions, write design system docs
+- [ ] **Phase 6: Assembly, Polish & Documentation** - Responsive audit, performance tuning, section transition polish, design system docs
 
 ## Phase Details
 
@@ -119,12 +119,12 @@ Plans:
   1. The site renders correctly at 375px (mobile), 768px (tablet), and 1440px+ (desktop) — no horizontal overflow, no broken layouts, no illegible text
   2. Scrolling through the full page produces a visually coherent dark-light-dark-light section rhythm with clean geometric transitions between sections
   3. A Lighthouse performance audit returns a score of 90+ with no render-blocking resources and correct next/font behavior
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 06-01: Assemble app/page.tsx — compose all sections in correct render order with section alternation
-- [ ] 06-02: Responsive audit across 375px, 768px, and 1440px — fix any breakpoint failures
-- [ ] 06-03: Performance audit and design system documentation (DESIGN_SYSTEM.md, COMPONENTS.md)
+- [ ] 06-01-PLAN.md — Responsive audit and fixes across 375px, 768px, and 1440px breakpoints (Wave 1)
+- [ ] 06-02-PLAN.md — Performance optimization and Lighthouse 90+ audit (Wave 2)
+- [ ] 06-03-PLAN.md — Design system documentation: DESIGN_SYSTEM.md and COMPONENTS.md (Wave 1)
 
 ---
 
@@ -145,4 +145,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 ---
 *Roadmap created: 2026-02-22*
-*Last updated: 2026-02-23 after Phase 5 execution complete*
+*Last updated: 2026-02-23 after Phase 6 planning complete*
