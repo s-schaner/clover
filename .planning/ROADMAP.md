@@ -82,12 +82,12 @@ Plans:
   3. Portfolio project cards render with the correct anatomy: title, project type, outcome metric field, and technology tag list — all driven by typed props
   4. Team profile cards show a geometric or initial-based avatar placeholder (not a stock photo) alongside name, role, and social link icons
   5. The contact form renders with name, email, and message fields; the submit button is visually disabled with a clear "Coming Soon" label
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Build animated fractal hero element SVG component and ServiceCard with geometric icon
-- [ ] 04-02: Build PortfolioCard with full project anatomy and category filter structure
-- [ ] 04-03: Build TeamCard with geometric avatar placeholder and ContactForm with disabled submit
+- [ ] 04-01-PLAN.md — Build ServiceCard with geometric SVG icon system, verify HERO-03 satisfied by GeometryAccent (Wave 1)
+- [ ] 04-02-PLAN.md — Build PortfolioCard with full project anatomy and data-category filter readiness (Wave 1)
+- [ ] 04-03-PLAN.md — Build TeamCard with SVG monogram avatar (clover accent) and ContactForm with disabled submit (Wave 1)
 
 ---
 
@@ -132,18 +132,18 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 (Note: Phase 2 and Phase 3 have no inter-dependency — they can run in parallel if desired)
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Design System | 3/3 | Complete ✓ | 2026-02-22 |
-| 2. Shell & Navigation | 2/2 | Complete ✓ | 2026-02-22 |
-| 3. Visual Primitives & Animation | 3/3 | Complete ✓ | 2026-02-23 |
-| 4. Card Components | 0/3 | Not started | - |
+| 1. Foundation & Design System | 3/3 | Complete | 2026-02-22 |
+| 2. Shell & Navigation | 2/2 | Complete | 2026-02-22 |
+| 3. Visual Primitives & Animation | 3/3 | Complete | 2026-02-23 |
+| 4. Card Components | 0/3 | Planned | - |
 | 5. Section Builds | 0/5 | Not started | - |
 | 6. Assembly, Polish & Documentation | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-02-22*
-*Last updated: 2026-02-23 after Phase 3 execution complete*
+*Last updated: 2026-02-23 after Phase 4 planning complete*
