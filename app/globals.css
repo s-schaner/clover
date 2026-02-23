@@ -129,4 +129,36 @@
       animation: none;
     }
   }
+
+  /* Link underline draw effect — thin line draws in from left on hover, retracts on leave.
+     Uses CSS ::after pseudo-element so the draw/retract works without JavaScript.
+     currentColor matches text in both dark and light section contexts.
+     prefers-reduced-motion: underline still appears on hover, but instantly (no transition). */
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .link-underline:hover::after {
+    transform: scaleX(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link-underline::after {
+      transition: none;
+    }
+  }
 }
