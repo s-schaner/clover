@@ -108,6 +108,9 @@ Recent decisions affecting current work:
 - [05-03]: SVG map pin is inline hand-crafted (teardrop path + filled circle), 12x16 viewBox, stroke=currentColor
 - [05-04]: page.tsx uses fragment (<>) not <main> — layout.tsx already wraps children in <main>; page root must not add another <main>
 - [05-04]: page.tsx is purely declarative orchestration — 20 lines, no state/effects/logic, all 5 section components are self-contained
+- [06-01]: TeamSection changed from lg:grid-cols-4 to grid-cols-2 md:grid-cols-4 — 2-col on mobile, 4-col at 768px tablet (note: supersedes [05-03] lg:grid-cols-4 entry)
+- [06-01]: HeroSection changed from min-h-screen to min-h-[100dvh] — dvh accounts for mobile browser chrome (iOS Safari / Android Chrome address bar)
+- [06-01]: globals.css --text-hero clamp min reduced 3rem→2.25rem and --section-padding-y min reduced 5rem→3.5rem — hero fits in viewport at 375px without scrolling
 - [06-03]: Documentation pattern: all values extracted from actual source (globals.css, TypeScript files) — not stale planning docs
 - [06-03]: HoverLift built-in warning documented for ServiceCard/PortfolioCard/TeamCard — prevents double-wrapping bug
 - [06-03]: Adding 5th team member requires TeamSection grid-cols update — grid-cols-4 breaks with 5 items
