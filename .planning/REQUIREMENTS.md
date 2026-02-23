@@ -28,30 +28,30 @@ Requirements for the skeleton/framework site. Each maps to roadmap phases.
 
 - [ ] **HERO-01**: Full-viewport-height hero section as the landing visual
 - [ ] **HERO-02**: Bold positioning tagline that communicates elite engineering capability
-- [ ] **HERO-03**: Animated geometric fractal background as signature visual moment (SVG-based, viewport-triggered)
+- [x] **HERO-03**: Animated geometric fractal background as signature visual moment (SVG-based, viewport-triggered)
 
 ### Services
 
 - [ ] **SERV-01**: 3-6 capability area cards displaying what Clover Labs builds
 - [ ] **SERV-02**: Technical descriptions for each capability — precise engineering language, not marketing fluff
-- [ ] **SERV-03**: Minimal geometric icons or visual indicators per capability card
+- [x] **SERV-03**: Minimal geometric icons or visual indicators per capability card
 
 ### Portfolio
 
 - [ ] **PORT-01**: Capability category groupings (e.g., AI/ML, Cloud Infrastructure, Custom Software)
-- [ ] **PORT-02**: Placeholder project cards with correct anatomy — title, type, outcome metric, tech tags
+- [x] **PORT-02**: Placeholder project cards with correct anatomy — title, type, outcome metric, tech tags
 - [ ] **PORT-03**: Category filtering — click a category to filter visible project cards
 
 ### Team
 
 - [ ] **TEAM-01**: Profile cards for all 4 owners — Mike Wong, Matt Drapp, Peter Kwon, Stefan Schaner (real names from day one)
-- [ ] **TEAM-02**: Geometric or initial-based avatar placeholders (not stock photos)
+- [x] **TEAM-02**: Geometric or initial-based avatar placeholders (not stock photos)
 - [ ] **TEAM-03**: Role/title display for each owner (placeholder titles)
 - [ ] **TEAM-04**: Social/LinkedIn link icons per profile (placeholder href values)
 
 ### Contact
 
-- [ ] **CONT-01**: Contact form with name, email, and message fields — submit visually disabled with clear "Coming Soon" label
+- [x] **CONT-01**: Contact form with name, email, and message fields — submit visually disabled with clear "Coming Soon" label
 - [ ] **CONT-02**: Company email address displayed as clickable mailto link
 - [ ] **CONT-03**: Location display showing Ashburn, Virginia with minimal pin graphic or geographic element
 
@@ -135,18 +135,18 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NAV-05 | Phase 2 | Complete |
 | HERO-01 | Phase 5 | Pending |
 | HERO-02 | Phase 5 | Pending |
-| HERO-03 | Phase 4 | Pending |
+| HERO-03 | Phase 4 | Complete |
 | SERV-01 | Phase 5 | Pending |
 | SERV-02 | Phase 5 | Pending |
-| SERV-03 | Phase 4 | Pending |
+| SERV-03 | Phase 4 | Complete |
 | PORT-01 | Phase 5 | Pending |
-| PORT-02 | Phase 4 | Pending |
+| PORT-02 | Phase 4 | Complete |
 | PORT-03 | Phase 5 | Pending |
 | TEAM-01 | Phase 5 | Pending |
-| TEAM-02 | Phase 4 | Pending |
+| TEAM-02 | Phase 4 | Complete |
 | TEAM-03 | Phase 5 | Pending |
 | TEAM-04 | Phase 5 | Pending |
-| CONT-01 | Phase 4 | Pending |
+| CONT-01 | Phase 4 | Complete |
 | CONT-02 | Phase 5 | Pending |
 | CONT-03 | Phase 5 | Pending |
 | VISL-01 | Phase 3 | Complete |
@@ -167,4 +167,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-22*
-*Last updated: 2026-02-23 after Phase 3 execution — VISL-01 through VISL-06, LAYT-04 complete*
+*Last updated: 2026-02-23 after Phase 4 execution — HERO-03, SERV-03, PORT-02, TEAM-02, CONT-01 complete*

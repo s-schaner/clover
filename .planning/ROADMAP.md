@@ -13,7 +13,7 @@ The Clover Labs skeleton website is built in a strict dependency-driven order: d
 - [x] **Phase 1: Foundation & Design System** - Scaffold Next.js, define all design tokens, type interfaces, and content constants
 - [x] **Phase 2: Shell & Navigation** - Build sticky navigation, scroll-spy, mobile menu, section wrapper, and layout skeleton
 - [x] **Phase 3: Visual Primitives & Animation** - Create geometric fractal patterns, geometry accents, and motion wrapper components
-- [ ] **Phase 4: Card Components** - Build all UI card atoms — service, portfolio, team, contact form, fractal hero element
+- [x] **Phase 4: Card Components** - Build all UI card atoms — service, portfolio, team, contact form, fractal hero element
 - [ ] **Phase 5: Section Builds** - Implement all five content sections (Hero, Services, Portfolio, Team, Contact)
 - [ ] **Phase 6: Assembly, Polish & Documentation** - Assemble page, verify responsiveness, tune section transitions, write design system docs
 
@@ -85,9 +85,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Build ServiceCard with geometric SVG icon system, verify HERO-03 satisfied by GeometryAccent (Wave 1)
-- [ ] 04-02-PLAN.md — Build PortfolioCard with full project anatomy and data-category filter readiness (Wave 1)
-- [ ] 04-03-PLAN.md — Build TeamCard with SVG monogram avatar (clover accent) and ContactForm with disabled submit (Wave 1)
+- [x] 04-01-PLAN.md — Build ServiceCard with geometric SVG icon system, verify HERO-03 satisfied by GeometryAccent (Wave 1)
+- [x] 04-02-PLAN.md — Build PortfolioCard with full project anatomy and data-category filter readiness (Wave 1)
+- [x] 04-03-PLAN.md — Build TeamCard with SVG monogram avatar (clover accent) and ContactForm with disabled submit (Wave 1)
 
 ---
 
@@ -140,10 +140,10 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-22 |
 | 2. Shell & Navigation | 2/2 | Complete | 2026-02-22 |
 | 3. Visual Primitives & Animation | 3/3 | Complete | 2026-02-23 |
-| 4. Card Components | 0/3 | Planned | - |
+| 4. Card Components | 3/3 | Complete | 2026-02-23 |
 | 5. Section Builds | 0/5 | Not started | - |
 | 6. Assembly, Polish & Documentation | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-02-22*
-*Last updated: 2026-02-23 after Phase 4 planning complete*
+*Last updated: 2026-02-23 after Phase 4 execution complete*
