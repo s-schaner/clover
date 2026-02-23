@@ -8,7 +8,7 @@ import { SECTIONS, SECTION_IDS } from '@/lib/constants';
 
 export default function Home() {
   return (
-    <main>
+    <>
       {SECTIONS.map((section) => (
         <SectionWrapper
           key={section.id}
@@ -21,6 +21,6 @@ export default function Home() {
           </div>
         </SectionWrapper>
       ))}
-    </main>
+    </>
   );
 }
