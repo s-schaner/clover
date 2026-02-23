@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 5 — Section Builds (05-02 PortfolioSection complete)
+**Current focus:** Phase 5 — Section Builds (05-01 HeroSection + ServicesSection, 05-02 PortfolioSection complete)
 
 ## Current Position
 
 Phase: 5 of 6 (Section Builds)
-Plan: 2 of 5 in current phase
-Status: In progress — 05-02 PortfolioSection complete
-Last activity: 2026-02-23 — Completed 05-02-PLAN.md (PortfolioSection with category filter)
+Plan: 2 of 5 in current phase (05-01 and 05-02 complete)
+Status: In progress — 05-01 HeroSection + ServicesSection complete
+Last activity: 2026-02-23 — Completed 05-01-PLAN.md (HeroSection and ServicesSection)
 
 Progress: [████████████] ~67% (12/18 plans estimated)
 
@@ -91,6 +91,10 @@ Recent decisions affecting current work:
 - [04-03]: CloverAccentMini positioned at cx=88 cy=28 in 120x120 viewBox — top-right of letter cluster, same cubic bezier petal formula as GeometryAccent
 - [04-03]: Social icons layout: flex justify-between on role row — role text left, social icons flex-shrink-0 right (CONTEXT.md inline integration)
 - [04-03]: ContactForm uses readOnly on inputs (not disabled) — only submit is disabled; preserves focusability for preview feel
+- [05-01]: HeroSection inner div keeps px-[--section-padding-x] — flex-centered without max-w-7xl, needs horizontal padding for text column
+- [05-01]: ServicesSection inner div has NO padding — SectionWrapper handles py/px; inner div is only relative + max-w-7xl centering
+- [05-01]: Geometric heading accent pattern: line-diamond-line (span.h-px + span.rotate-45 border diamond + span.h-px) centered above h2
+- [05-01]: All 5 SERVICES mapped in ServicesSection — no .slice() like Phase 3 validation placeholder
 - [05-02]: 'All' prepended at component level in allFilters — PORTFOLIO_CATEGORIES in constants.ts does NOT include it
 - [05-02]: visibleItems rendered via .filter() and mapped directly — non-matching items not rendered (not hidden with CSS)
 - [05-02]: Security category shows empty grid — no empty state message; expected behavior (no Security items in PORTFOLIO_ITEMS)
@@ -109,5 +113,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-23
-Stopped at: Completed 05-02-PLAN.md — PortfolioSection with category filter pills
+Stopped at: Completed 05-01-PLAN.md — HeroSection and ServicesSection (05-01 and 05-02 both complete)
 Resume file: None
