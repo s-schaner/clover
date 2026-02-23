@@ -101,4 +101,32 @@
       transition: none;
     }
   }
+
+  /* Hero signature draw animation — stroke-dashoffset technique.
+     Path length set at runtime via --hero-path-length CSS custom property (getTotalLength()).
+     Draws in at ~13% opacity over 1.2s, then settles to ~6% over 0.8s. */
+  .hero-pattern-draw {
+    stroke-dasharray: var(--hero-path-length, 2000);
+    stroke-dashoffset: var(--hero-path-length, 2000);
+    animation:
+      hero-draw 1.2s cubic-bezier(0.0, 0.0, 0.2, 1) forwards,
+      hero-settle 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) 1.2s forwards;
+    opacity: 0.13;
+  }
+
+  @keyframes hero-draw {
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes hero-settle {
+    to { opacity: 0.06; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-pattern-draw {
+      stroke-dashoffset: 0;
+      opacity: 0.06;
+      animation: none;
+    }
+  }
 }
