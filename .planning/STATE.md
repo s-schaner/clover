@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 6 — Assembly, Polish & Documentation (Phase 5 verified complete — 11/11 must-haves passed)
+**Current focus:** Phase 6 complete — all 3 plans finished. Site documented and ready for handoff.
 
 ## Current Position
 
 Phase: 6 of 6 (Assembly, Polish & Documentation)
-Plan: 0 of 3 in current phase
-Status: Ready for Phase 6 — Phase 5 verified complete (11/11 must-haves passed)
-Last activity: 2026-02-23 — Phase 5 verified and closed
+Plan: 3 of 3 in current phase — PHASE COMPLETE
+Status: All 6 phases complete — site built, polished, and documented
+Last activity: 2026-02-23 — Completed 06-03 documentation (DESIGN_SYSTEM.md + COMPONENTS.md)
 
-Progress: [███████████████] ~82% (15/18 plans estimated)
+Progress: [████████████████████] 100% (18/18 plans complete)
 
 ## Performance Metrics
 
@@ -32,10 +32,11 @@ Progress: [███████████████] ~82% (15/18 plans esti
 | 03-visual-primitives-animation | 3/3 | ~17 min | ~5.7 min |
 | 04-card-components | 3/3 | ~17 min | ~5.7 min |
 | 05-section-builds | 4/4 (complete) | ~12 min | ~3 min |
+| 06-assembly-polish-documentation | 3/3 (complete) | ~20 min | ~7 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-03 (~8 min), 05-01 (~4 min), 05-02 (~4 min), 05-03 (~2 min), 05-04 (~4 min)
-- Trend: Stable, accelerating as patterns repeat
+- Last 5 plans: 05-04 (~4 min), 06-01 (~8 min), 06-02 (~4 min), 06-03 (~8 min)
+- Trend: All phases complete
 
 *Updated after each plan completion*
 
@@ -107,10 +108,14 @@ Recent decisions affecting current work:
 - [05-03]: SVG map pin is inline hand-crafted (teardrop path + filled circle), 12x16 viewBox, stroke=currentColor
 - [05-04]: page.tsx uses fragment (<>) not <main> — layout.tsx already wraps children in <main>; page root must not add another <main>
 - [05-04]: page.tsx is purely declarative orchestration — 20 lines, no state/effects/logic, all 5 section components are self-contained
+- [06-03]: Documentation pattern: all values extracted from actual source (globals.css, TypeScript files) — not stale planning docs
+- [06-03]: HoverLift built-in warning documented for ServiceCard/PortfolioCard/TeamCard — prevents double-wrapping bug
+- [06-03]: Adding 5th team member requires TeamSection grid-cols update — grid-cols-4 breaks with 5 items
+- [06-03]: ContactForm max-w-lg override uses [&_form]:max-w-none — no className prop exists on ContactForm
 
 ### Pending Todos
 
-None yet.
+None — all phases complete.
 
 ### Blockers/Concerns
 
@@ -121,5 +126,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-23
-Stopped at: Phase 5 verified complete. Ready for Phase 6 (Assembly, Polish & Documentation)
+Stopped at: Completed 06-03-PLAN.md — all 6 phases complete. Site built, polished, and documented.
 Resume file: None
