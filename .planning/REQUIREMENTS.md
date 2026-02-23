@@ -9,12 +9,12 @@ Requirements for the skeleton/framework site. Each maps to roadmap phases.
 
 ### Foundation & Design System
 
-- [ ] **FNDN-01**: Next.js 15 project scaffolded with TypeScript strict mode and App Router
-- [ ] **FNDN-02**: Tailwind CSS v4 configured with B&W semantic color tokens (surface, on-surface, border, muted values)
-- [ ] **FNDN-03**: Typography scale defined — Space Grotesk (headings), Inter (body), JetBrains Mono (code accents) via next/font
-- [ ] **FNDN-04**: Spacing rhythm and design tokens defined as CSS custom properties in globals.css
-- [ ] **FNDN-05**: All static content centralized in lib/constants.ts as single source of truth
-- [ ] **FNDN-06**: TypeScript interfaces for all data shapes in lib/types.ts (ServiceItem, PortfolioItem, TeamMember, etc.)
+- [x] **FNDN-01**: Next.js 16 project scaffolded with TypeScript strict mode and App Router
+- [x] **FNDN-02**: Tailwind CSS v4 configured with B&W semantic color tokens (surface, on-surface, border, muted values)
+- [x] **FNDN-03**: Typography scale defined — Space Grotesk (headings), Inter (body), JetBrains Mono (code accents) via next/font
+- [x] **FNDN-04**: Spacing rhythm and design tokens defined as CSS custom properties in globals.css
+- [x] **FNDN-05**: All static content centralized in lib/constants.ts as single source of truth
+- [x] **FNDN-06**: TypeScript interfaces for all data shapes in lib/types.ts (ServiceItem, PortfolioItem, TeamMember, etc.)
 
 ### Navigation
 
@@ -122,12 +122,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FNDN-01 | Phase 1 | Pending |
-| FNDN-02 | Phase 1 | Pending |
-| FNDN-03 | Phase 1 | Pending |
-| FNDN-04 | Phase 1 | Pending |
-| FNDN-05 | Phase 1 | Pending |
-| FNDN-06 | Phase 1 | Pending |
+| FNDN-01 | Phase 1 | Complete |
+| FNDN-02 | Phase 1 | Complete |
+| FNDN-03 | Phase 1 | Complete |
+| FNDN-04 | Phase 1 | Complete |
+| FNDN-05 | Phase 1 | Complete |
+| FNDN-06 | Phase 1 | Complete |
 | NAV-01 | Phase 2 | Pending |
 | NAV-02 | Phase 2 | Pending |
 | NAV-03 | Phase 2 | Pending |
@@ -167,4 +167,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-22*
-*Last updated: 2026-02-22 after roadmap creation — traceability complete*
+*Last updated: 2026-02-22 after Phase 1 execution — FNDN-01 through FNDN-06 complete*
