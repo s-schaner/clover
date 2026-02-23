@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Visitors immediately perceive Clover Labs as world-class engineers who solve hard problems
-**Current focus:** Phase 3 — Visual Primitives & Animation (Phase 2 complete)
+**Current focus:** Phase 3 — Visual Primitives & Animation (Plan 02 of 03 complete)
 
 ## Current Position
 
 Phase: 3 of 6 (Visual Primitives & Animation)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-02-22 — Phase 2 verified and complete (7/7 requirements passed)
+Plan: 2 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-22 — Completed 03-02-PLAN.md (scroll animation wrappers)
 
-Progress: [████░░░░░░] ~28% (5/18 plans estimated)
+Progress: [████░░░░░░] ~33% (6/18 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 6
 - Average duration: ~6 min
-- Total execution time: ~0.50 hours
+- Total execution time: ~0.60 hours
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [████░░░░░░] ~28% (5/18 plans estimated)
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 24 min | 8 min |
 | 02-shell-navigation | 2/2 | ~7 min | ~3.5 min |
+| 03-visual-primitives-animation | 2/3 | ~12 min | ~6 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (14 min), 01-02 (8 min), 01-03 (2 min), 02-01 (~5 min), 02-02 (~2 min)
-- Trend: Faster
+- Last 5 plans: 01-03 (2 min), 02-01 (~5 min), 02-02 (~2 min), 03-01 (~6 min), 03-02 (~6 min)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -66,6 +67,10 @@ Recent decisions affecting current work:
 - [02-02]: activeSection initialized to SECTION_IDS.HERO so no nav link highlighted on page load (Hero not in NAV_LINKS)
 - [02-verify]: data-scroll-behavior="smooth" is a Next.js 16 router signal only — must also add CSS rule `html[data-scroll-behavior="smooth"] { scroll-behavior: smooth }` for actual smooth scrolling
 - [02-verify]: page.tsx uses fragment (<>) not <main> — layout.tsx already wraps children in <main>, avoiding nested <main> HTML spec violation
+- [03-02]: framer-motion 12 staggerChildren is deprecated — use manual (row + col) * staggerInterval delay per StaggerItem for diagonal cascade
+- [03-02]: StaggerChildren is a plain div (no framer-motion) — animation entirely in StaggerItem, each self-managing viewport tracking
+- [03-02]: useReducedMotion returns boolean | null (null on SSR) — truthy check handles both true and null safely
+- [03-02]: viewport.amount 0.1 for StaggerItem (card-sized) vs 0.2 for FadeInOnScroll (section-level) — prevents flickering at edge
 
 ### Pending Todos
 
@@ -73,7 +78,6 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Research]: Hero signature visual moment implementation (CSS keyframe vs. GSAP SVG stroke vs. Framer Motion) must be decided before Phase 3 begins — it determines which animation tools Phase 3 must build and validate
 - [Research]: Actual company email address must be confirmed before Phase 5 Contact section build (research flagged `hello@cloverlabs.io` as placeholder only)
 - [Research]: Capability taxonomy for portfolio section (AI/ML, Cloud Infrastructure, etc.) is a business decision — must be confirmed by owners before Phase 5
 - [01-03]: Team member roles (titles) pending owner confirmation — placeholder "Co-Founder & Principal Engineer" used for all four members
@@ -81,5 +85,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Phase 2 complete and verified — ready to plan Phase 3
+Stopped at: Completed 03-02-PLAN.md — FadeInOnScroll and StaggerChildren/StaggerItem components
 Resume file: None
